@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intasend button tutorial</title>
+    <script src="https://unpkg.com/intasend-inlinejs-sdk@4.0.0/build/intasend-inline.js"></script>
+  </head>
+  <style>
+    .intaSendPayButton {
+      background: #2cc1ee;
+      border-radius: 3px;
+      border: 1px solid #2cc1ee;
+      color: #fff;
+      height: 34px;
+    }
+    .intaSendPayButton:hover {
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <center>
+      <div>
+        <button
+          class="intaSendPayButton"
+          data-amount="10"
+          data-currency="KES"
+          data-email="joe@doe.com"
+          data-first_name="JOE"
+          data-last_name="DOE"
+          data-country="KE"
+        >
+          Pay Now
+        </button>
+      </div>
+    </center>
+    <div class="visme_d" data-title="Untitled Project" data-url="oje9kg7e-untitled-project?fullPage=true" data-domain="forms" data-full-page="true" data-min-height="100vh" data-form-id="57425"></div><script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
+
+    <script>
+      new window.IntaSend({
+        // Replace with your Publishable Key
+        publicAPIKey: "ISPubKey_test_f776b131-c148-4734-81ef-fed227f72018",
+        live: true, //set to true when going live
+      })
+        .on("COMPLETE", (results) =>
+          console.log("Do something on success", results)
+        )
+        .on("FAILED", (results) =>
+          console.log("Do something on failure", results)
+        )
+        .on("IN-PROGRESS", (results) =>
+          console.log("Payment in progress status", results)
+        );
+    </script>
+  </body>
+</html>

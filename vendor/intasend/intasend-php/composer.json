@@ -1,0 +1,27 @@
+{
+    "name": "intasend/intasend-php",
+    "description": "The official PHP SDK for IntaSend Payment Gateway",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kishan",
+            "email": "kishanmnpatel@gmail.com"
+        },
+        {
+            "name": "Felix CHERUIYOT",
+            "email": "felix@intasend.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "IntaSend\\IntaSendPHP\\": "src/"
+        }
+    },
+    "prefer-stable": true,
+    "minimum-stability": "stable"
+}
